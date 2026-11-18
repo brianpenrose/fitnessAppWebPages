@@ -20,7 +20,7 @@
     </header>
     <main>
       <h1>Privacy policy</h1>
-      <p class="updated">Last updated: 21 October 2026</p>
+      <p class="updated">Last updated: 18 November 2026</p>
 
       <p>
         This policy explains what information the ANOAthlete app (&ldquo;the app&rdquo;) uses, why,
@@ -38,9 +38,10 @@
       <div class="summary">
         <h3>The short version</h3>
         <ul>
-          <li>Your workouts, logs, notes, goals and personal bests are stored <strong>on your phone only</strong>, not on our servers.</li>
+          <li>Your workouts, logs, notes, goals and personal bests are stored <strong>on your phone only</strong>. You can export a backup to a location you choose; it is not sent to our servers.</li>
           <li>If you create an account, we store your email address and, if you use the AI programme feature, the programmes you upload.</li>
           <li>If you choose to extract a schedule with AI, the document you picked is sent to OpenAI to read it. We ask you first.</li>
+          <li>For signed-in accounts, we keep AI request counts and an active-extraction marker to enforce per-account usage limits.</li>
           <li>We do not sell your data, show ads, or use advertising or analytics trackers.</li>
           <li>You can delete your account and its data at any time inside the app.</li>
         </ul>
@@ -52,8 +53,13 @@
       <p>
         Workouts you record, exercise results (reps, weight, distance, time), notes, completion
         marks, goals, pinned personal bests, reminder preferences and a cache of exercise names.
-        This stays on your device. If you delete the app or change phone, it is not recoverable
-        from us. Guest mode keeps everything on your device and does not create an account.
+        This stays on your device and is not recoverable from us if you delete the app or change
+        phone. Guest mode keeps everything on your device and does not create an account. If you
+        choose <strong>Profile &rarr; Export workout backup</strong>, the app creates a JSON file
+        for you to save using your device's sharing or download options. The backup is not
+        automatically sent to our servers or encrypted by the app; protect it like other personal
+        files. Restoring a backup merges it with local workout data. We cannot delete backup files
+        you have saved outside the app, including when you delete your account.
       </p>
 
       <h3>If you create an account</h3>
@@ -85,6 +91,12 @@
         personal bests. The results are cached on your device.
       </p>
       <p>
+        To control automated use, our Supabase service records per-account request counts for
+        these AI features in rolling 24-hour windows and temporarily marks an extraction as
+        active. The counters and marker do not include workout logs or exercise results. The
+        usage record is removed when you delete your account.
+      </p>
+      <p>
         AI can make mistakes. Always check the schedule it creates before relying on it.
       </p>
 
@@ -112,6 +124,11 @@
           <tr>
             <td>Keep the service secure and prevent abuse</td>
             <td>Technical logs from our service providers</td>
+            <td>Legitimate interests</td>
+          </tr>
+          <tr>
+            <td>Enforce per-account AI usage limits</td>
+            <td>AI feature request counts and extraction status</td>
             <td>Legitimate interests</td>
           </tr>
           <tr>
